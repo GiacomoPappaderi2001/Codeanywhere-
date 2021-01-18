@@ -14,7 +14,7 @@ import java.net.Socket;
 import java.util.Date;
 import java.util.StringTokenizer;
 import java.util.Scanner;
-import com.google.gson.Gson;
+import com.google.gson.*;
 import com.google.gson.reflect.TypeToken;
 
 import java.util.List;
@@ -58,7 +58,7 @@ public class JavaHTTPServer implements Runnable{
 		}
 	}
 
-	@Override
+	//@Override
 	public void run() {
 		/*Esercizio*/
 		//punto 1
@@ -163,7 +163,7 @@ public class JavaHTTPServer implements Runnable{
 	
 	private String dataToString() {
 		String jsonstring="";
-		File file=new File("src/main/resources/puntiVendita.json");
+		File file=new File("res/puntiVendita.json");
 		try {
 	        Scanner sc = new Scanner(file);
 	        jsonstring=sc.nextLine();
